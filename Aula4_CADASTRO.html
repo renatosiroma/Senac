@@ -3,37 +3,36 @@
 
 	<script type='text/javascript'>
 	
+		//Função que insere 3 parametros numa tabela pre-definida
 		function inserir(x, y, z){
+			
 			var tabela  = document.getElementById("lista_alunos");
-			var linha   = tabela.insertRow(0); //Insere linha 
+			
+			var total_de_linhas = tabela.rows.length; //Fonte: 
+				
+			var linha   = tabela.insertRow( total_de_linhas ); //Insere linha 
+			
 			var celula  = linha.insertCell(0);
 			var celula2 = linha.insertCell(1);
 			var celula3 = linha.insertCell(2);
 			
-			celula.innerHTML= x; //innerHTML insere o valor html dentro do elemento
-			celula.style.display = 'none';
-			
+			celula.innerHTML= x; //innerHTML insere o valor html dentro do elemento 
 			celula2.innerHTML= y;
-			celula.style.width = '250px';
-			
 			celula3.innerHTML= z;
-			celula.style.width = '50px';
-			
+		
 		}
 		
 		function cadastrar(){
-			//Criando variavel literal 
-			var nome = ""; 
+			var nome = "";//Variavel literal/texto  
 			var endereco = "";
-			
 			var idade = 0;//variavel inteira 
 			
 			nome 	 = prompt("Entre com o nome do aluno:");
+			
+				//Procedimento que verifica se é o fim do cadastro
+				if( nome.toUpperCase() == "FIM" )
+					return false; //Quando uma função retorna quer dizer que acabou aqui 
 				
-				//Procedimento que repete o cadastro
-				if( nome.toUpperCase() == "FIM" ){
-					return false; 
-				}
 			
 			endereco = prompt("Entre com o endereco:");
 			idade	 = prompt("Entre com a idade:");
@@ -44,6 +43,11 @@
 
 <!-- Tabela que ira receber cadastros -->
 <table id='lista_alunos' border='1'>
+	<tr>
+		<th width="150px">Nome</th>
+		<th width="250px">Endereco</th>
+		<th width="50px">Idade</th>
+	</tr>
 </table>
 
 <input type='button' value="Cadastrar aluno" onclick="javascript: cadastrar();" />

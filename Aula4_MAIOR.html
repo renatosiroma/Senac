@@ -1,0 +1,28 @@
+<script type='text/javascript'>
+
+	//Funcao para pegar valor e retornar inteiro
+	function pegaNumero(texto){
+		var numero = prompt(texto); //Prompt é função para pegar valor 
+		return parseInt(numero); //Parseint converte para numérico 
+	}
+	
+	var NUM1 = pegaNumero("Entre com o primeiro numero:");
+		
+	var NUM2 = pegaNumero("Entre com o segundo numero:");
+		
+	var NUM3 = pegaNumero("Entre com o terceiro numero:");
+		
+	var MAIOR = 0;
+	
+	
+	if ( (NUM1 > NUM2) && (NUM1 > NUM3) ){
+		MAIOR = NUM1;
+	}else if( NUM2 > NUM3 ){
+		MAIOR = NUM2;
+	}else{
+		MAIOR = NUM3;
+	}
+	
+	alert( MAIOR );
+	
+</script>
