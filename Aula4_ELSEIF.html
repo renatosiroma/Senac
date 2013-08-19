@@ -1,16 +1,16 @@
-<script>
+<script type='text/javascript'>
 
 var primeiro = prompt("Entre com o primeiro numero:");
 var segundo = prompt("Entre com o segundo numero:");
 
- if ( primeiro > segundo ){
- 	alert("O primeiro numero e maior");
- }else{
- 	alert("O segundo numero e maior");
- }
-
- if( primeiro == segundo ){
- 	alert("Os números sap iguais");
- }
-
+	//Se primeiro for maior que segundo
+	if ( primeiro > segundo ){
+		alert("O primeiro numero e maior");
+	}else if( primeiro < segundo ){ //OU Se primeiro for menor que segundo
+		alert("O segundo numero e maior");
+	}else{ //Se nao
+		 alert("Os números sao iguais");	 
+	}
+ 
+ 
 </script>
