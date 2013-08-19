@@ -1,16 +1,29 @@
 <script type='text/javascript'>
-
+	
+	//Funcao promt exibe uma caixa para entrar com um valor 
 	var primeiro = prompt("Entre com o primeiro numero:");
 	var segundo = prompt("Entre com o segundo numero:");
 	
+	//Funcao maior descobre maior numero entre primeiro e segundo 
 	function maior(){
 		
-		if( primeiro > segundo ){
+		//Procedimento utilizando variaveis pre-definidas
+		if( primeiro > segundo )
 			return primeiro;
-		}
 		
 		return segundo;
 	}
-
-	alert( "Maior numero:" + maior() );
+	
+	//Funcao que soma os parametros x e y
+	function somar(x, y){
+		
+		//Procedimento de soma onde parseInt converte o literal para inteiro 
+		var total = ( parseInt(x) + parseInt(y) );
+		
+		return total;
+	}
+	
+	alert( "Maior numero : " + maior() );
+	alert( "A soma deles : " + somar(primeiro, segundo) );
+	
 </script>
