@@ -1,0 +1,51 @@
+<html>
+<body>
+
+	<script type='text/javascript'>
+	
+		function inserir(x, y, z){
+			var tabela  = document.getElementById("lista_alunos");
+			var linha   = tabela.insertRow(0); //Insere linha 
+			var celula  = linha.insertCell(0);
+			var celula2 = linha.insertCell(1);
+			var celula3 = linha.insertCell(2);
+			
+			celula.innerHTML= x; //innerHTML insere o valor html dentro do elemento
+			celula.style.display = 'none';
+			
+			celula2.innerHTML= y;
+			celula.style.width = '250px';
+			
+			celula3.innerHTML= z;
+			celula.style.width = '50px';
+			
+		}
+		
+		function cadastrar(){
+			//Criando variavel literal 
+			var nome = ""; 
+			var endereco = "";
+			
+			var idade = 0;//variavel inteira 
+			
+			nome 	 = prompt("Entre com o nome do aluno:");
+				
+				//Procedimento que repete o cadastro
+				if( nome.toUpperCase() == "FIM" ){
+					return false; 
+				}
+			
+			endereco = prompt("Entre com o endereco:");
+			idade	 = prompt("Entre com a idade:");
+			
+			inserir(nome, endereco, idade);
+		}
+	</script>
+
+<!-- Tabela que ira receber cadastros -->
+<table id='lista_alunos' border='1'>
+</table>
+
+<input type='button' value="Cadastrar aluno" onclick="javascript: cadastrar();" />
+</body> 
+</html>
